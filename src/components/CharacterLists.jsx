@@ -2,15 +2,17 @@ import { useEffect, useState } from "react";
 import Character from "./Character";
 
 function NavPage(props) {
+  var currentPage = `bi bi-${props.page}-circle-fill fs-1 text-primary text-opacity-50 `
   return (
     <header className="d-flex justify-content-between">
       <button id="backButton"
         className="btn btn-primary btn-md align-items-center"
         onClick={() => props.setPage(props.page - 1)}
       >
+        
         ←
       </button>
-      <p>Page: {props.page}</p>
+      <i class={currentPage}></i>
       <button
         className="btn btn-primary btn-md align-items-center"
         onClick={() => props.setPage(props.page + 1)}
